@@ -24,4 +24,4 @@ A full-stack app to log coffee brews, built for the XPL bootcamp assessment.
 - `DELETE /api/brews/:id` — delete a brew
 
 ## Status
-Backend fully implemented and tested (CREATE endpoint verified working end-to-end, returns 201 with saved data). Frontend not completed due to time constraints during environment setup (Prisma version compatibility issues consumed significant development time).
+Backend fully fuctional, all CRUD(CREATE, READ, UPDATE, DELETE) endpoints verified from start to finish. Frontend fully functional with React + Tailwind CSS, including brew logging form, ticket-style history view, method filtering, sort toggle, live stats summary, and inline delete confirmation. Full stack tested and working locally.
