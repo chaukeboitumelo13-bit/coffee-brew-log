@@ -30,6 +30,9 @@ export default function App() {
   useEffect(() => {
     loadBrews();
   }, [loadBrews]);
+  useEffect(() => {
+    document.title =  `Brews: ${brews.length}`;
+  }, [brews]);
 
   const sortedBrews = useMemo(() => {
     const copy = [...brews];
@@ -63,7 +66,7 @@ export default function App() {
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#D4A24C] mb-2">
             No. 001 — Brewing Journal
           </p>
-          <h1 className="font-serif text-4xl sm:text-5xl text-[#EDE3D0]">Coffee Brew Log</h1>
+          <h1 className="font-serif text-4xl sm:text-5xl text-[#EDE3D0]">Brews: {brews.length}</h1>
         </div>
       </header>
 
