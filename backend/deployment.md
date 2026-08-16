@@ -18,5 +18,18 @@ Not deployed to a live host. The app was fully built and tested locally (see Doc
 3. Publish directory: `dist`
 4. Set environment variable `VITE_API_URL` to the deployed backend's URL (e.g. `https://coffee-brew-log-api.onrender.com/api/brews`)
 
-## Known blocker
-Switching from SQLite to PostgreSQL for production requires a schema and migration change that wasn't completed in the time available — this is the main remaining step before deployment can be attempted.
+# Deployment
+
+## Live URLs
+- Frontend: https://coffee-brew-log-rn0h.onrender.com
+- Backend API: https://coffee-brew-log-api-l5c7.onrender.com
+
+## Stack
+Deployed on Render.com — frontend as a Static Site, backend as a Web Service, database as a free PostgreSQL instance.
+
+## Setup notes
+- Backend build command: `npm install && npx prisma generate`
+- Backend start command: `node server.js`
+- Frontend build command: `npm install && npm run build`, publish directory: `dist`
+- Environment variables: `DATABASE_URL` (backend), `VITE_API_URL` (frontend)
+- Schema switched from SQLite to PostgreSQL for production since Render's free tier doesn't persist local SQLite files between deploys.
