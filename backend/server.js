@@ -37,6 +37,7 @@ app.get('/api/brews', async (req, res) => {
     });
     res.status(200).json(brews);
   } catch (error) {
+    console.error('GET /api/brews error:', error);
     res.status(500).json({ error: 'Failed to fetch brews' });
   }
 });
